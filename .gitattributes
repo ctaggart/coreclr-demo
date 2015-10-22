@@ -1,0 +1,5 @@
+# Autodetect text or binary. Do not leave merge conflict markers in the files.
+* text=auto merge=union
+
+# Use LF in the working directory by default. Override with core.autocrlf=true.
+*.cs eol=lf

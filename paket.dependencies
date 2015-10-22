@@ -1,0 +1,23 @@
+source https://www.myget.org/F/dotnet-core/
+source https://nuget.org/api/v2
+
+# CoreCLR Runtime
+nuget Microsoft.NETCore.Runtime.CoreCLR-x64 prerelease
+
+# has CoreConsole.exe
+nuget Microsoft.NETCore.Runtime.CoreCLR.ConsoleHost-x64 prerelease
+
+# code against these reference assemblies
+nuget System.Runtime prerelease
+nuget System.Console prerelease
+
+# packages\System.Console\runtime.json says we need this for our platform
+nuget runtime.win7.System.Console prerelease
+
+# runtime dependencies
+nuget System.IO prerelease
+nuget System.IO.FileSystem.Primitives prerelease
+nuget System.Runtime.InteropServices prerelease
+nuget System.Text.Encoding prerelease
+nuget System.Threading prerelease
+nuget System.Threading.Tasks prerelease
